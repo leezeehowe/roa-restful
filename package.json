@@ -13,6 +13,10 @@
     "koa-router": "^8.0.8",
     "reflect-metadata": "^0.1.13"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leezeehowe/roa-restful.git"
+  },
   "devDependencies": {
     "@types/koa": "^2.11.1",
     "@types/koa-router": "^7.4.0",
