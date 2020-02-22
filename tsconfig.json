@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "target": "ES5",
+        "moduleResolution": "node",
+        "strictNullChecks": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "experimentalDecorators": true
+    },
+    "include": [
+        "./src/**/*", "index.js"
+    ]
+}

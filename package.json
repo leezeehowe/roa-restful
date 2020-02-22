@@ -1,0 +1,29 @@
+{
+  "name": "roa-restful",
+  "version": "1.0.7",
+  "description": "simplify routes definition of koa2",
+  "main": "index.js",
+  "scripts": {
+    "test": "ts-node ./test"
+  },
+  "author": "leezeehowe <leezeehowe@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-router": "^8.0.8",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.11.1",
+    "@types/koa-router": "^7.4.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.2"
+  },
+  "keywords": [
+    "koa2",
+    "koa",
+    "koa-router",
+    "decorator",
+    "Typescript"
+  ]
+}
