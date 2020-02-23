@@ -1,6 +1,6 @@
 {
   "name": "roa-restful",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "simplify routes definition of koa2",
   "main": "./dist/index.js",
   "scripts": {
