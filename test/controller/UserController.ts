@@ -4,9 +4,12 @@ import { Context } from "koa";
 @Controller("/user")
 export class UserController {
 
-    @Get("/info")
+    @Get("/:id")
     async index(ctx: Context, next: Function) {
-        ctx.response.body = "here is userInfo";
+        ctx.response.body = {
+            id: ctx.params.id,
+            name: "lee"
+        };
     }
 
     @Post("")

@@ -25,6 +25,11 @@ class RouteMetadata {
 
 function setRouteMetadata(metadata: RouteMetadata, target: any, key: Symbol = ROUTEMETADATA_KEY): void {
     let metadata_set = Reflect.getMetadata(key, target);
+
+    if(metadata.url.trim() === "") {
+        metadata.url = "/";
+    }
+
     if (!Reflect.hasMetadata(key, target)) {
         metadata_set = new Set<RouteMetadata>([metadata]);
     }
@@ -34,28 +39,28 @@ function setRouteMetadata(metadata: RouteMetadata, target: any, key: Symbol = RO
     Reflect.defineMetadata(key, metadata_set, target);
 }
 
-function Get(url: string = "") {
+function Get(url: string = "/") {
     return function (target: any, propertyKey: string, descriptor: object) {
         const metadata = new RouteMetadata(propertyKey, url, HTTP_METHOD.GET);
         setRouteMetadata(metadata, target);
     }
 }
 
-function Post(url: string) {
+function Post(url: string = "/") {
     return function (target: any, propertyKey: string, descriptor: object) {
         const metadata = new RouteMetadata(propertyKey, url, HTTP_METHOD.POST);
         setRouteMetadata(metadata, target);
     }
 }
 
-function Delete(url: string) {
+function Delete(url: string = "/") {
     return function (target: any, propertyKey: string, descriptor: object) {
         const metadata = new RouteMetadata(propertyKey, url, HTTP_METHOD.DELETE);
         setRouteMetadata(metadata, target);
     }
 }
 
-function Put(url: string) {
+function Put(url: string = "/") {
     return function (target: any, propertyKey: string, descriptor: object) {
         const metadata = new RouteMetadata(propertyKey, url, HTTP_METHOD.PUT);
         setRouteMetadata(metadata, target);
