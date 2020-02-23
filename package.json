@@ -1,9 +1,10 @@
 {
   "name": "roa-restful",
-  "version": "1.0.8",
+  "version": "0.0.1",
   "description": "simplify routes definition of koa2",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "ts-node ./test"
   },
   "author": "leezeehowe <leezeehowe@gmail.com>",
