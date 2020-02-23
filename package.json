@@ -2,7 +2,7 @@
   "name": "roa-restful",
   "version": "0.0.1",
   "description": "simplify routes definition of koa2",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "tsc",
     "test": "ts-node ./test"
