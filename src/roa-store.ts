@@ -3,14 +3,6 @@ import Router = require("koa-router")
 const CONTROLLER_MAP: Map<string, Router> = new Map<string, Router>();
 
 const addController = (key: string, router: Router) => {
-    console.log(
-        "## add Controller to Roa-Store ##########################################\n\n" + 
-        `key: ${key}\n` + 
-        `routeMetadata:\n` + 
-        `${JSON.stringify(router, null, "\t")}` + 
-        "\n########################################################################\n"
-    );
-
     CONTROLLER_MAP.set(key, router);
 }
 
